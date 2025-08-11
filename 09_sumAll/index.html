@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sumAll = function(a, b) {
+    const range = function(start, stop, step) {
+       return Array.from(
+            { length: Math.ceil((stop - start) / step) + 1},
+            (_, index) => start + index * step
+        );
+    }
+   return range(a, b, 1).reduce((sum, current) => sum + current, 0);
+};
+
+    </script>
+    
+</body>
+</html>
