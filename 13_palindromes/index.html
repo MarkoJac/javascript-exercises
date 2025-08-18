@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palindromes = function (string) {
+        
+        let forwards = string.toLowerCase().replace(/[\W\s]/g, "");
+        console.log(forwards);
+        let backwards = forwards.split("").reverse().join("");
+        console.log(backwards);
+
+        if (forwards === backwards ) {
+        return true;
+         } else {
+        return false;
+         }
+};
+    </script>
+</body>
+</html>
