@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palindromes = function (string) {
+        
+        let forwards = string.toLowerCase().replace(/[\W\s]/g, "");
+        
+        let backwards = forwards.split("").reverse().join("");
+        
+
+        if (forwards === backwards ) {
+        return true;
+         } else {
+        return false;
+         }
+};
+    </script>
+
+    <script>
+        const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1066,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
+
+const currentYear = new Date().getFullYear();
+
+const findTheOldest = function(array) {
+   let peopleAged = array.map(person => {
+    switch (typeof person.yearOfDeath){
+        case "undefined":
+               return ({ name: person.name,
+               age: `${currentYear - person.yearOfBirth}`});
+        case "number":
+               return ({ name: person.name,
+               age: `${person.yearOfDeath - person.yearOfBirth}`});
+               
+    }
+   }
+    ).sort((a, b) => a.age -b.age);
+
+    return peopleAged[peopleAged.length - 1];
+   
+}; 
+findTheOldest(people);
+
+    </script>
+</body>
+</html>
